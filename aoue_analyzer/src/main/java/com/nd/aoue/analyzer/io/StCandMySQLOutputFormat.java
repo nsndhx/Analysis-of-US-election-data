@@ -39,7 +39,7 @@ public class StCandMySQLOutputFormat extends OutputFormat<Text,Text> {
             PreparedStatement ps=null;
             //TODO 本组化 现在插入的是职业以及计算得出的总金额
             try {
-                String insertSQL="insert into st_cand (dt, st, cand, amount) values (?, ?, ?, ?);";
+                String insertSQL="insert into st_cand (dt,state,candidtate,money) values (?, ?, ?, ?);";
                 ps = connection.prepareStatement(insertSQL);
                 ps.setString(1, data);
                 ps.setString(2, St);
